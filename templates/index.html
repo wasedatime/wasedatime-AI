@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waseda Time Shadow Profile</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', path='/tiger.png') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', path='/main.css') }}" />
+  </head>
+  <body>
+    <img src="{{ url_for('static', path='/tiger.png') }}" class="icon" />
+    <h3>Waseda Time Shadow User Comments</h3>
+    <form action="/" method="post">
+      <input type="text" name="topic" placeholder="Enter a topic" autocomplete="off" required />
+      <input type="submit" value="Generate comments" />
+    </form>
+    {% if topic %}
+    <div class="topic">{{ topic|replace("\n", "<br>")|safe }}</div>
+    {% endif %}
+
+    {% if result %}
+    <div class="result">{{ result|replace("\n", "<br>")|safe }}</div>
+    {% endif %}
+  </body>
+</html>

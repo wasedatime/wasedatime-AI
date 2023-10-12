@@ -1,0 +1,7 @@
+syllabus_files/SILS.json
+syllabus_files/syllabus_id_name.json
+/venv/
+.env
+.vscode/launch.json
+.vscode/tasks.json
+*.pyc
